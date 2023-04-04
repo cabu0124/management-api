@@ -1,2 +1,23 @@
-# management-api
- Management api
+# Employee Management API
+
+This is a CRUD API for managing employees in a company. It allows you to perform the following operations:
+
+- Get all employees
+- Get an employee by id
+- Create a new employee
+- Update employee information
+- Delete an employee
+
+## Technologies Used
+
+This API is built using Python.
+
+## API Endpoints
+
+The following endpoints are available for accessing employee data:
+
+- `GET /employees`: Retrieves a list of all employees
+- `GET /employees/<id>`: Retrieves details for a specific employee
+- `POST /employees`: Creates a new employee record
+- `PUT /employees/<id>`: Updates an existing employee record
+- `DELETE /employees/<id>`: Deletes an employee record
