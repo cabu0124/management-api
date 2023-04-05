@@ -12,6 +12,12 @@ This is a CRUD API for managing employees in a company. It allows you to perform
 
 This API is built using Python.
 
+## Steps
+
+- pip install fastapi
+- pip install uvicorn
+- uvicorn app:app --reload
+
 ## API Endpoints
 
 The following endpoints are available for accessing employee data:

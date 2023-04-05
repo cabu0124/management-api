@@ -14,7 +14,7 @@ class Employee(BaseModel):
     EmployeeNo:str
     EmploymentEndDate:datetime
     EmploymentStartDate:datetime
-    Status:bool = False
+    Status:int = 0
 
 #EmployeeUpdate Model
 class EmployeeUpdate(BaseModel):
@@ -22,7 +22,7 @@ class EmployeeUpdate(BaseModel):
     FirstName:str
     LastName:str
     SSN:str
-    Status:bool
+    Status:int
 
 app = FastAPI()
 
@@ -48,7 +48,7 @@ employees = [
     "EmployeeNo": "0001",
     "EmploymentEndDate": "2023-04-02T03:52:48.462000+00:00",
     "EmploymentStartDate": "2023-04-02T03:52:48.462000+00:00",
-    "Status": False
+    "Status": 0
   },
   {
     "PersonID": "fcc12c62-2782-45dd-bb36-07f5035d8670",
@@ -60,7 +60,7 @@ employees = [
     "EmployeeNo": "0001",
     "EmploymentEndDate": "2023-04-02T03:52:48.462000+00:00",
     "EmploymentStartDate": "2023-04-02T03:52:48.462000+00:00",
-    "Status": False
+    "Status": 0
   },
   {
     "PersonID": "fcc12c62-2782-45dd-bb36-07f5035d8671",
@@ -72,7 +72,7 @@ employees = [
     "EmployeeNo": "0001",
     "EmploymentEndDate": "2023-04-02T03:52:48.462000+00:00",
     "EmploymentStartDate": "2023-04-02T03:52:48.462000+00:00",
-    "Status": False
+    "Status": 0
   }
 ]
 
@@ -96,7 +96,7 @@ def create_employee(employee:Employee):
     employees.append(employee.dict())
     return {'Message':'The employee has been created'}
 
-@app.delete('/Employees/{employeeId}')
+@app.delete('/Employees({employeeId})')
 def delete_employee(employeeId:str):
     for index, employee in enumerate(employees):
         if employee['PersonID'] == employeeId:
