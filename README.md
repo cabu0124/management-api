@@ -27,3 +27,11 @@ The following endpoints are available for accessing employee data:
 - `POST /employees`: Creates a new employee record
 - `PUT /employees`: Updates an existing employee record
 - `DELETE /employees/<id>`: Deletes an employee record
+
+## Contribution
+Contributions are welcome! If you’d like to contribute:
+
+- Fork the repository.
+- Create a new branch (git checkout -b feature/new-feature).
+- Make your changes and commit them (git commit -m 'Add new feature').
+- Submit a pull request.
